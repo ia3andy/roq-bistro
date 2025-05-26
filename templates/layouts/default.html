@@ -1,0 +1,39 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>{site.title}</title>
+  <meta content="" name="description">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+
+  <meta content="" property="og:title">
+  <meta content="" property="og:type">
+  <meta content="" property="og:url">
+  <meta content="" property="og:image">
+
+  <link href="{site.file('icon.png')}" rel="apple-touch-icon">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link href="{site.file('css/tailwind.css')}" rel="stylesheet">
+  <meta content="#fafafa" name="theme-color">
+</head>
+
+<body>
+{#insert /}
+
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js"></script>
+<script>
+    (function () {
+        var scroll = new LocomotiveScroll();
+    })();
+</script>
+<script defer src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+<script src="{site.file('js/vendor/modernizr-3.11.2.min.js')}"></script>
+<script src="{site.file('js/plugins.js')}"></script>
+<script src="{site.file('js/main.js')}"></script>
+<script src="{site.file('js/navbar.js')}"></script>
+
+</body>
+
+</html>
