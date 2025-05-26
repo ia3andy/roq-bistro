@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{#let home = (page.data.name is 'home')}
+{#let home = page.data.name.equals('home')}
 <!-- Add your site or application content here -->
 <header @keydown.escape="isOpen = false"
         class="relative flex {#if home}h-screen{#else}h-auto{/if} w-full overflow-hidden"
@@ -12,7 +12,7 @@ layout: default
       class="relative z-20 top-0 right-0 w-full inline-block px-10 pt-5 text-2xl text-{#if home}white{#else}black{/if} bg-transparent bg-opacity-50 rounded-xl">
     <div class="flex justify-between items-center">
       <a href="{site.url}">
-        <img alt="Picnic Bistro Logo" class="h-20 lg:h-32" src="{site.file('assets/img/picnic-logo-white.svg')}">
+        <img alt="Picnic Bistro Logo" class="h-20 lg:h-32" src="{#if home}{site.file('assets/img/picnic-logo-white.svg')}{#else}{site.file('assets/img/picnic-logo-black.svg')}{/if}">
       </a>
       <div class="hidden lg:block">
         <ul class="flex">
@@ -123,11 +123,13 @@ layout: default
     <div class="flex justify-center h-64 w-full lg:w-1/4">
       <ul class="-ml-20">
         <li class="font-sans text-2xl font-bold tracking-wide pb-4">FIND US</li>
-        <li class="font-sans  font-bold text-lg py-2">Adresa :</li>
-        <li>Ineu, Bihor, RO</li>
+        <li class="font-sans  font-bold text-lg py-2">Address :</li>
+        <li>A, La, Bien</li>
+        <li>1 rue de la Canebière</li>
+        <li>13001 Marseille</li>
         <li class="font-sans  font-bold text-lg py-2">Phone / Email :</li>
-        <li>+40 742 742 642</li>
-        <li>info@picnicbistro.ro</li>
+        <li>+33 742 742 642</li>
+        <li>info@picnicbistro.com</li>
       </ul>
     </div>
     <div class="flex justify-center h-64 w-full ml-10 lg:-ml-0 lg:w-1/4">
