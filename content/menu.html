@@ -7,73 +7,18 @@ name: menu
   </div>
 
   <ul>
-    <li class="pt-10 pb-6 text-5xl tracking-widest uppercase">Drinks</li>
+    {#for key in cdi:menu.fieldNames}
+    <li class="pt-10 pb-6 text-5xl tracking-widest uppercase">
+      {key}
+    </li>
     <li class="pb-20 text-2xl">
       <ul class="menu">
-        <li class="py-4 font-sans font-bold" data-img="img/1.jpg">Dish #1 - 5</li>
-        <li>Component 1 . Component 2 . Component . Component 4</li>
-        <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-        <li>Component 1 . Component 2 . Component . Component 4</li>
-        <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-        <li>Component 1 . Component 2 . Component . Component 4</li>
-        <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-        <li>Component 1 . Component 2 . Component . Component 4</li>
-        <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-        <li>Component 1 . Component 2 . Component . Component 4</li>
-        <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-        <li>Component 1 . Component 2 . Component . Component 4</li>
+        {#for item in cdi:menu.get(key)}
+        <li class="py-4 font-sans font-bold">{item.title}</li>
+        <li>{item.description}</li>
+        {/for}
       </ul>
     </li>
-    <li class="pt-10 pb-6 text-5xl tracking-widest uppercase">Drinks</li>
-    <li class="pb-20 text-2xl">
-      <ul>
-        <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-        <li>Component 1 . Component 2 . Component . Component 4</li>
-        <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-        <li>Component 1 . Component 2 . Component . Component 4</li>
-        <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-        <li>Component 1 . Component 2 . Component . Component 4</li>
-        <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-        <li>Component 1 . Component 2 . Component . Component 4</li>
-        <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-        <li>Component 1 . Component 2 . Component . Component 4</li>
-        <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-        <li>Component 1 . Component 2 . Component . Component 4</li>
-      </ul>
-    </li>
-    <li class="pt-10 pb-6 text-5xl tracking-widest uppercase">Drinks</li>
-    <li class="pb-20 text-2xl">
-      <ul>
-        <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-        <li>Component 1 . Component 2 . Component . Component 4</li>
-        <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-        <li>Component 1 . Component 2 . Component . Component 4</li>
-        <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-        <li>Component 1 . Component 2 . Component . Component 4</li>
-        <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-        <li>Component 1 . Component 2 . Component . Component 4</li>
-        <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-        <li>Component 1 . Component 2 . Component . Component 4</li>
-        <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-        <li>Component 1 . Component 2 . Component . Component 4</li>
-      </ul>
-    </li>
-    <li class="pt-10 pb-6 text-5xl tracking-widest uppercase">Drinks</li>
-    <li class="pb-20 text-2xl">
-      <ul>
-        <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-        <li>Component 1 . Component 2 . Component . Component 4</li>
-        <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-        <li>Component 1 . Component 2 . Component . Component 4</li>
-        <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-        <li>Component 1 . Component 2 . Component . Component 4</li>
-        <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-        <li>Component 1 . Component 2 . Component . Component 4</li>
-        <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-        <li>Component 1 . Component 2 . Component . Component 4</li>
-        <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-        <li>Component 1 . Component 2 . Component . Component 4</li>
-      </ul>
-    </li>
+    {/for}
   </ul>
 </section>

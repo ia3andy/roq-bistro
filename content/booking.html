@@ -9,37 +9,23 @@ name: booking
     <p class="text-2xl pb-6">or</p>
     <p class="text-3xl pb-4">info@picnicbistro.com</p>
     <h2 class="font-sans font-bold text-3xl pt-6 pb-6 uppercase tracking-wide">House rules:</h2>
-    <p class="text-xl pb-2">The terrace is organized with tables of 3 or 6 people.</p>
+    <p class="text-xl pb-2">The terrace is organized with tables of 2 or 6 people.</p>
     <p class="text-xl pb-2">Reservations should preferably be made one day in advance, or three days in advance for groups larger than 6 people.</p>
     <p class="text-xl pb-2">Reservations are held for 20 minutes.</p>
   </div>
   <div class="text-center my-10">
     <h2 class="font-sans font-bold text-3xl pb-6 uppercase tracking-wide">Opening Hours : </h2>
-    <div class="flex items-center justify-evenly text-center">
+    <div class="flex flex-wrap justify-evenly text-center gap-4">
+      {#for entry in cdi:opening.hours}
       <div>
         <p class="font-sans font-bold text-2xl pb-2">
-          Luni
+          {entry.day}
         </p>
-        <p class="text-xl"> 11 - 23</p>
-      </div>
-      <div>
-        <p class="font-sans font-bold text-2xl pb-2">
-          Luni
+        <p class="text-xl">
+          {entry.time}
         </p>
-        <p class="text-xl"> 11 - 23</p>
       </div>
-      <div>
-        <p class="font-sans font-bold text-2xl pb-2">
-          Luni
-        </p>
-        <p class="text-xl"> 11 - 23</p>
-      </div>
-      <div>
-        <p class="font-sans font-bold text-2xl pb-2">
-          Luni
-        </p>
-        <p class="text-xl"> 11 - 23</p>
-      </div>
+      {/for}
     </div>
   </div>
   <div class="flex items-center justify-center">

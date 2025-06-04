@@ -1,0 +1,31 @@
+drinks:
+  - title: "Homemade Lemonade - €4"
+    description: "Fresh lemon . Sparkling water . Garden mint"
+  - title: "Peach Iced Tea - €4"
+    description: "Homemade infusion . White peach . Crushed ice"
+  - title: "Craft Beer - €6"
+    description: "Local brewery . Light blonde . 33cl"
+  - title: "Glass of Rosé - €5"
+    description: "Coteaux d’Aix-en-Provence . Chilled and fruity"
+
+starters:
+  - title: "Tapenade Toast - €6"
+    description: "Grilled bread . Homemade tapenade . Provençal herbs"
+  - title: "Warm Goat Cheese Salad - €8"
+    description: "Mixed greens . Warm goat cheese . Honey and walnuts"
+
+mains:
+  - title: "Provençal Vegetable Bake - €12"
+    description: "Eggplant . Zucchini . Tomato . Parmesan . Olive oil"
+  - title: "Mediterranean Burger - €14"
+    description: "Artisan bun . Beef patty . Pesto . Sun-dried tomato . Feta"
+  - title: "Sea Bream Fillet - €16"
+    description: "Catch of the day . Ratatouille . Saffron rice"
+
+desserts:
+  - title: "Fig Tart - €6"
+    description: "Fresh figs . Almond cream . Buttery shortcrust"
+  - title: "Artisanal Ice Cream - €5"
+    description: "Two scoops of your choice . Vanilla, lavender, or lemon basil"
+  - title: "Molten Chocolate Cake - €6"
+    description: "Melting center . Dark Valrhona chocolate"
